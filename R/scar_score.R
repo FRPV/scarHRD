@@ -56,6 +56,6 @@ scar_score<-function(seg,reference = "grch38", seqz=FALSE, ploidy=NULL, sizelimi
   HRDresulst<-c(res_hrd,res_ai[1],res_lst,sum_HRD0)
   names(HRDresulst)<-c("HRD",colnames(res_ai)[1],"LST", "HRD-sum")
   run_name<-names(sum_HRD0)
-  write.table(t(HRDresulst),paste0(outputdir,"/",run_name,"_HRDresults.txt"),col.names=NA,sep="\t",row.names=unique(seg[,1]))
+  write.table(t(HRDresulst),paste0(outputdir,"/",run_name,"_HRDresults.txt"),col.names=NA,sep="\t")
   return(t(HRDresulst))
 }
